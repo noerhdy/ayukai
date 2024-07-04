@@ -39,25 +39,50 @@ const ModalProfil = ({ isVisible, onClose }) => {
             </div>
           </div>
 
-          <div className="flex max-w-screen-sm py-4">
-            <div className="text-md w-3/4 flex flex-col space-y-4  ">
-              <h1>
-                This is profil of Ayukai, where we post thoughts and things that
-                we think are worth keeping.
-              </h1>
-              <h1>
-                Why Ayukai? This name is inspired by a theme in code editor
-                called Mayukai. We chose Ayukai because we like the way it
-                sounds. Last but not least, we simply like it overall.
-              </h1>
+          <div className="flex flex-col space-y-8 max-w-screen-sm pt-8">
+            <div className=" text-end">
+              <button className=" cursor-pointer" onClick={onClose}>
+                close
+              </button>
             </div>
-            <div className="w-1/4 cursor-pointer text-end">
-              <button onClick={onClose}>close</button>
+            <div className="text-md w-full space-y-4  text-balance  ">
+              <h1>
+                This is profil of Ayukai, where <i>we</i> post thoughts and
+                things that <i>we</i> think are worth keeping.
+              </h1>
+              <h1>
+                <span className="font-medium">Why Ayukai?</span> This name is
+                inspired by a theme in code editor called Mayukai. <i>We</i>
+                chose Ayukai because <i>we</i> like the way it sounds. Last but
+                not least, we simply like it overall.
+              </h1>
+              <div className="text-md w-full space-y-2 pt-4 text-balance ">
+                <h1 className="font-medium">Have some fucking integrity </h1>
+                <h1>
+                  What you say matters. Your words are only as powerful as the
+                  action precode. When you dont follow through, you rob them of
+                  any value. Dont tell people what they want to hear. <br />
+                  Dont live in the sad, artificial world of unfulfilled
+                  commitment. Dont create an illusion of your intent, fulfill it
+                  through setting goals and accepting consequencess. <br /> Your
+                  responsibilities won't go away. when you chose not to face
+                  them, You bar yourself from ever enjoying in the area of your
+                  life that occupy.
+                </h1>
+              </div>
             </div>
           </div>
-          <div className="flex w-full py-12">
-            <div className="w-1/2">view site</div>
-            <div className="w-1/2">hala pepek</div>
+
+          <div className="flex max-w-screen-sm flex-col py-12">
+            <h1 className="font-medium py-4 cursor-default">Lets Connect </h1>
+            <div className="flex w-full justify-between">
+              <div className="w-1/2 cursor-default">
+                Direct message where you open this site
+              </div>
+              <div className="text-zinc-400 cursor-not-allowed">
+                Personal site
+              </div>
+            </div>
           </div>
         </motion.div>
       )}

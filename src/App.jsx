@@ -30,8 +30,13 @@ function App() {
     <>
       <div className="absolute w-full z-10">
         <nav className="text-zinc-500 max-w-screen-2xl flex justify-between py-4 mx-4 text-lg">
-          <h1>Ayukai</h1>
-          <h1 onClick={handleShowrealClick}>Showreal</h1>
+          <h1 className="cursor-default ">Ayukai</h1>
+          <h1
+            className="cursor-pointer hover:text-red-500 ease-in-out duration-500 delay-100 "
+            onClick={handleShowrealClick}
+          >
+            Showreal
+          </h1>
         </nav>
       </div>
 
