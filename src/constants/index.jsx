@@ -1,7 +1,55 @@
-export const dataPlay = [
+export const dataAm = [
   {
     id: "01",
     title: "Ignorance",
+    subTitle: "Paramore",
+    date: "2009",
+    site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",
+    videoId: "OH9A6tn_P6g", // Tambahkan ID video YouTube
+    thumbnail: "./2.jpg",
+    Post: "BELOMMM",
+  },
+  {
+    id: "02",
+    title: "Alexandra",
+    subTitle: "Reality Club",
+    date: "2009",
+    site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",
+    thumbnail: "./2.jpg",
+    Post: "BELOMMM",
+  },
+  {
+    id: "03",
+    title: "Like A Villain",
+    subTitle: "Paramore",
+    date: "2009",
+    site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",
+    thumbnail: "",
+    Post: "BELOMMM",
+  },
+  {
+    id: "04",
+    title: "Do I Wanna Know?",
+    subTitle: "Paramore",
+    date: "2009",
+    site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",
+    thumbnail: "",
+    Post: "BELOMMM",
+  },
+  {
+    id: "05",
+    title: "Sleepwalking",
+    subTitle: "Paramore",
+    date: "2009",
+    site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",
+    thumbnail: "",
+    Post: "BELOMMM",
+  },
+];
+export const dataPm = [
+  {
+    id: "01",
+    title: "Billiiee",
     subTitle: "Paramore",
     date: "2009",
     site: "https://www.youtube.com/watch?v=OH9A6tn_P6g",

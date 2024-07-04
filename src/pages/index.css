@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+::-webkit-scrollbar {
+  display: none;
+}
+html {
+  scrollbar-width: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  font-family: "Geist Variable";
+  font-family: "Geist Mono Variable";
+}
