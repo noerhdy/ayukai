@@ -107,7 +107,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
 
           <div className="flex max-w-screen-sm flex-col py-6  dark:border-none border-t border-dashed border-zinc-600 ">
             <h1 className="font-medium pb-4 cursor-default text-zinc-600 dark:text-black ">
-              Lets Connect
+              Connect
             </h1>
             <div className="flex w-full justify-between">
               <div className="w-1/2 cursor-default dark:text-zinc-950 text-red-500">

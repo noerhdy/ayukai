@@ -35,7 +35,7 @@ const ModalContent = ({ isVisible, onClose, data }) => {
             src={data.thumbnail}
             alt="example"
           />
-          <AudioContent />
+          <AudioContent musicUrl={data.play} />
         </motion.div>
       )}
     </AnimatePresence>
