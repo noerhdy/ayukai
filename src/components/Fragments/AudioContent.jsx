@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 
-const AudioContent = ({ musicUrl }) => {
+const AudioContent = ({ musicUrl, onPlayPause }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const audioRef = useRef(null);
 
@@ -8,6 +8,7 @@ const AudioContent = ({ musicUrl }) => {
     try {
       await audioRef.current.play();
       setIsPlaying(true);
+      if (onPlayPause) onPlayPause(true);
     } catch (error) {
       console.error("Error attempting to play audio:", error);
     }
@@ -16,12 +17,14 @@ const AudioContent = ({ musicUrl }) => {
   const pauseAudio = () => {
     audioRef.current.pause();
     setIsPlaying(false);
+    if (onPlayPause) onPlayPause(false);
   };
 
   useEffect(() => {
     const audioElement = audioRef.current;
     const handleAudioEnded = () => {
       setIsPlaying(false);
+      if (onPlayPause) onPlayPause(false);
     };
 
     if (audioElement) {
@@ -46,6 +49,7 @@ const AudioContent = ({ musicUrl }) => {
       audioRef.current.pause();
       audioRef.current.load();
       setIsPlaying(false);
+      if (onPlayPause) onPlayPause(false);
     }
   }, [musicUrl]);
 
@@ -58,9 +62,16 @@ const AudioContent = ({ musicUrl }) => {
   };
 
   return (
-    <div>
+    <div className="absolute z-40">
       <audio ref={audioRef} src={musicUrl}></audio>
-      <button onClick={togglePlay}>{isPlaying ? "Pause" : "Play"}</button>
+      <button
+        className={`font-bold text-xl ${
+          isPlaying ? "text-[#fdb969]" : "text-red-500"
+        }`}
+        onClick={togglePlay}
+      >
+        {isPlaying ? "Pause" : "Play"}
+      </button>
     </div>
   );
 };

@@ -47,12 +47,18 @@ function MainLayout() {
           {data.map((item, index) => (
             <div
               key={index}
-              className="sm:space-x-36 space-x-16  flex justify-start w-full sm:max-w-screen-sm cursor-pointer text-sm text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
+              className="   flex  place-content-start w-full sm:max-w-screen-sm  cursor-pointer text-sm text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
               onClick={() => handleItemClick(item)}
             >
-              <div className="w-10 sm:w-4 ">{item.id}</div>
-              <div className="w-60 ">{item.title}</div>
-              <div className="w-10 sm:w-4">{item.date}</div>
+              <div className=" sm:w-14 md:w-16 lg:w-24  w-16 ">
+                <h1>{item.id} </h1>
+              </div>
+              <div className="sm:w-52 md:w-72 lg:w-96 w-64">
+                <h1>{item.title} </h1>
+              </div>
+              <div className=" w-10 ">
+                <h1>{item.date} </h1>
+              </div>
             </div>
           ))}
         </div>

@@ -14,12 +14,8 @@ const AudioPlayer = () => {
       <h1>Music Playlist</h1>
       <ul>
         {dataAm.map((track) => (
-          <li key={track.id}>
-            <h3>
-              {track.title} - {track.subTitle}
-            </h3>
-            <p>{track.date}</p>
-            <button onClick={() => handlePlay(track)}>Play</button>
+          <li key={track}>
+            <button onClick={() => handlePlay(track)}>{track.title}</button>
           </li>
         ))}
       </ul>
