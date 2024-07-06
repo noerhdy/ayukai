@@ -2,6 +2,7 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
+import { AccordianProfil } from "./AccordianProfil";
 
 const ModalProfil = ({ isVisible, onClose }) => {
   const handleClick = (url) => {
@@ -11,7 +12,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow-y-auto sm:w-3/5 sm:h-5/6 pt-24 sm:pt-8 h-full text-wrap :top-0 z-20 space-y-2 dark:text-black bg-zinc-950 dark:bg-zinc-100 text-zinc-300 absolute sm:bottom-0 sm:right-0 p-8"
+          className="overflow-y-auto sm:w-3/5 sm:h-5/6  h-full text-wrap z-20 space-y-2 dark:text-zinc-400 bg-zinc-100 dark:bg-neutral-950 text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
@@ -24,26 +25,27 @@ const ModalProfil = ({ isVisible, onClose }) => {
               src="./byme.webp"
               alt="example"
             />
-            <div className=" absolute z-40 text-sm font-medium top-5 flex justify-between w-full tracking-wider px-4 text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
-              <h1>name? </h1>
-              <h1>my name's</h1>
-            </div>
-            <div className="text-4xl flex justify-center z-40 w-full absolute group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500 font-bold">
-              <Typewriter
-                options={{
-                  strings: ["unknown", "blurryface"],
-                  autoStart: true,
-                  loop: true,
-                }}
-              />
-            </div>
-            <div className=" absolute z-40 font-medium bottom-5 text-sm flex justify-between w-full tracking-wider px-4 text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
-              <h1>and i don't care</h1>
-              <h1>what you think</h1>
+
+            <div className=" flex flex-col  z-40 w-full  space-y-2 absolute group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500 font-bold">
+              <div className="  text-[12px] font-medium flex justify-center tracking-widertext-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
+                {/* <h1>name? my name's </h1> */}
+              </div>
+              <div className="text-5xl  flex justify-center ">
+                <Typewriter
+                  options={{
+                    strings: ["unknown", "blurryface"],
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+              </div>
+              <div className=" text-[12px] font-medium flex justify-center tracking-wider  text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
+                <h1>and i don't care what you think</h1>
+              </div>
             </div>
           </div>
 
-          <div className="flex flex-col space-y-8 max-w-screen-sm py-12">
+          <div className="flex flex-col space-y-4 max-w-screen-sm py-4">
             <div className=" text-end">
               <button
                 className="cursor-pointer font-medium text-sm hover:text-red-500 ease-in-out duration-500 delay-100"
@@ -52,18 +54,18 @@ const ModalProfil = ({ isVisible, onClose }) => {
                 close
               </button>
             </div>
-            <div className="text-md w-full space-y-4  text-balance leading-10 ">
+            <div className="text-sm w-full space-y-4  text-balance leading-8 ">
               <h1>
                 This is profil of Ayukai, where <i>we</i> post thoughts and
                 things that <i>we</i> think are worth keeping.
               </h1>
               <h1>
-                <span className="font-medium  dark:text-black text-white ">
+                <span className="font-medium  dark:text-[#fdb969] text-neutral-950 ">
                   Why Ayukai?
                 </span>
                 <br /> This name is inspired by a theme in code editor called{" "}
                 <span
-                  className="underline cursor-pointer hover:text-red-500 ease-in-out duration-500 delay-100"
+                  className="underline cursor-pointer hover:dark:text-[#fdb969] hover:text-red-500 ease-in-out duration-500 delay-100"
                   onClick={() =>
                     handleClick(
                       "https://marketplace.visualstudio.com/items?itemName=GulajavaMinistudio.mayukaithemevsc"
@@ -76,7 +78,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
                 chose Ayukai because <i>we</i> like the way it sounds. This
                 theme uses the base color swatch from the{" "}
                 <span
-                  className="underline cursor-pointer hover:text-red-500 ease-in-out duration-500 delay-100"
+                  className="underline cursor-pointer hover:dark:text-[#fdb969] hover:text-red-500 ease-in-out duration-500 delay-100"
                   onClick={() =>
                     handleClick("https://github.com/ayu-theme/vscode-ayu")
                   }
@@ -86,34 +88,19 @@ const ModalProfil = ({ isVisible, onClose }) => {
                 , with some adjustments for syntax coloring. Last but not least,
                 we simply like it overall.
               </h1>
-              <div className="text-md w-full space-y-2 pt-4 text-balance ">
-                <h1 className="font-medium  dark:text-black text-white ">
-                  Have some fucking integrity{" "}
-                </h1>
-                <h1>
-                  What you say matters. Your words are only as powerful as the
-                  action precode. When you dont follow through, you rob them of
-                  any value. Dont tell people what they want to hear. <br />
-                  Dont live in the sad, artificial world of unfulfilled
-                  commitment. Dont create an illusion of your intent, fulfill it
-                  through setting goals and accepting consequencess. <br /> Your
-                  responsibilities won't go away. when you chose not to face
-                  them, You bar yourself from ever enjoying in the area of your
-                  life that occupy.
-                </h1>
-              </div>
+              <AccordianProfil />
             </div>
           </div>
 
           <div className="flex max-w-screen-sm flex-col py-6  dark:border-none border-t border-dashed border-zinc-600 ">
-            <h1 className="font-medium pb-4 cursor-default text-zinc-600 dark:text-black ">
+            <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-[#fdb969] ">
               Connect
             </h1>
             <div className="flex w-full justify-between">
-              <div className="w-1/2 cursor-default dark:text-zinc-950 text-red-500">
+              <div className="w-1/2 cursor-default text-zinc-800 dark:text-zinc-300">
                 Direct message where you open this site
               </div>
-              <div className="dark:text-zinc-400 text-red-800 cursor-not-allowed">
+              <div className="text-zinc-400 dark:text-zinc-600 cursor-not-allowed line-through">
                 Personal site
               </div>
             </div>

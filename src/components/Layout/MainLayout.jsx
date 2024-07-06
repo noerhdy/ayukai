@@ -4,6 +4,7 @@ import ModalProfil from "../Fragments/ModalProfil";
 import { dataAm, dataPm } from "../../constants";
 import { useTheme } from "../theme-provider";
 import Navbar from "../Fragments/Navbar";
+import DateDisplay from "../Fragments/DateDisplay";
 
 function MainLayout() {
   const { theme } = useTheme();
@@ -43,11 +44,11 @@ function MainLayout() {
         onShowrealClick={handleShowrealClick}
       />
       <div className="max-w-screen-2xl h-svh items-end bg-zinc-50 dark:bg-neutral-950 flex relative overflow-hidden">
-        <div className="flex flex-col relative space-y-1  sm:max-w-screen-xl px-4 mb-12">
+        <div className="flex flex-col relative space-y-1  sm:max-w-screen-xl px-4 ">
           {data.map((item, index) => (
             <div
               key={index}
-              className="   flex  place-content-start w-full sm:max-w-screen-sm  cursor-pointer text-sm text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
+              className="  flex place-content-start w-full sm:max-w-screen-sm  cursor-pointer text-sm text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
               onClick={() => handleItemClick(item)}
             >
               <div className=" sm:w-14 md:w-16 lg:w-24  w-16 ">
@@ -57,12 +58,14 @@ function MainLayout() {
                 <h1>{item.title} </h1>
               </div>
               <div className=" w-10 ">
-                <h1>{item.date} </h1>
+                <h1 className="normal-nums">{item.date} </h1>
               </div>
             </div>
           ))}
+          <div className="pt-6 pb-2 text-center pl-16 text-md text-zinc-500">
+            <DateDisplay />
+          </div>
         </div>
-
         <ModalContent
           isVisible={isContentVisible}
           onClose={handleCloseContentClick}
