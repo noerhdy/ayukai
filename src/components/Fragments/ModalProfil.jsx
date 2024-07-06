@@ -21,7 +21,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
             <div className="w-full h-full bg-black opacity-60 group-hover:opacity-0 ease-in-out z-30 duration-500 absolute"></div>
             <img
               className="object-cover w-full grayscale group-hover:grayscale-0 delay-200 aspect-video bg-center duration-500 ease-in-out "
-              src="./byme.jpg"
+              src="./byme.webp"
               alt="example"
             />
             <div className=" absolute z-40 text-sm font-medium top-5 flex justify-between w-full tracking-wider px-4 text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">

@@ -42,17 +42,17 @@ function MainLayout() {
         onToggleAmPm={handleToggleAmPm}
         onShowrealClick={handleShowrealClick}
       />
-      <div className="max-w-screen-2xl h-screen items-end bg-zinc-50 dark:bg-neutral-950 flex relative overflow-hidden">
-        <div className="flex flex-col relative space-y-1 p-4 max-w-screen-md mb-12">
+      <div className="max-w-screen-2xl h-svh items-end bg-zinc-50 dark:bg-neutral-950 flex relative overflow-hidden">
+        <div className="flex flex-col relative space-y-1  sm:max-w-screen-xl px-4 mb-12">
           {data.map((item, index) => (
             <div
               key={index}
-              className="sm:space-x-36 space-x-16 flex justify-start w-full sm:max-w-screen-sm cursor-pointer text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
+              className="sm:space-x-36 space-x-16  flex justify-start w-full sm:max-w-screen-sm cursor-pointer text-sm text-zinc-500 hover:text-zinc-950 dark:hover:text-zinc-50 ease-in-out duration-200"
               onClick={() => handleItemClick(item)}
             >
-              <div>{item.id}</div>
-              <div className="w-1/2">{item.title}</div>
-              <div>{item.date}</div>
+              <div className="w-10 sm:w-4 ">{item.id}</div>
+              <div className="w-60 ">{item.title}</div>
+              <div className="w-10 sm:w-4">{item.date}</div>
             </div>
           ))}
         </div>
