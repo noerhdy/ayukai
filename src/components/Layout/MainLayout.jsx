@@ -62,9 +62,9 @@ function MainLayout() {
               </div>
             </div>
           ))}
-        </div>
-        <div className="pt-6 pb-2 text-center flex justify-center text-md text-zinc-500">
-          <DateDisplay />
+          <div className="pt-6 pb-2 text-center text-md text-zinc-500">
+            <DateDisplay />
+          </div>
         </div>
         <ModalContent
           isVisible={isContentVisible}

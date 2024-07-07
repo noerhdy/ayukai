@@ -46,11 +46,11 @@ const ModalContent = ({ isVisible, onClose, data }) => {
                 </div>
               </div>
               <div className="flex w-full justify-between items-center pt-8 font-medium">
-                <div className="font-medium normal-nums cursor-default">
+                <div className="font-medium normal-nums cursor-default dark:text-zinc-500">
                   {data.date}
                 </div>
                 <button
-                  className="cursor-pointer font-medium text-sm hover:text-red-500 ease-in-out duration-500 delay-100"
+                  className="cursor-pointer font-medium text-md hover:text-[#fdb969] dark:text-zinc-500 dark:hover:text-black ease-in-out duration-500 delay-100"
                   onClick={onClose}
                 >
                   close

@@ -6,13 +6,13 @@ import {
   AccordionTrigger,
 } from "../ui/accordion";
 
-export const AccordianProfil = () => {
+export const AcProfil2 = () => {
   return (
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
         <AccordionTrigger>
           <h1 className="font-medium  dark:text-[#fdb969] text-neutral-950 ">
-            Have some fucking integrity{" "}
+            Have some fucking integrity
           </h1>
         </AccordionTrigger>
         <AccordionContent>

@@ -59,11 +59,11 @@ const AmPm = ({ onToggle }) => {
           <span className="pl-1 text-sm">
             {" "}
             {isChecked ? (
-              <p className="text-zinc-500 group-hover:text-red-500 duration-200">
+              <p className="text-zinc-500 group-hover:text-[#fdb969] duration-200">
                 PM
               </p>
             ) : (
-              <p className="text-zinc-500 group-hover:text-red-500 duration-200">
+              <p className="text-zinc-500 group-hover:text-[#fdb969] duration-200">
                 AM
               </p>
             )}{" "}
