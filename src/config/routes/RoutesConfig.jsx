@@ -6,13 +6,19 @@ import "non.geist/mono";
 import ReactGA from "react-ga4";
 
 const RoutesConfig = () => {
-  // Inisialisasi ReactGA dengan ID Pelacakan GA4
   ReactGA.initialize("G-YWLZCC3289");
 
   useEffect(() => {
-    // Melacak halaman yang dilihat saat komponen dimuat
-    ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    if (userHasConsentedToCookies()) {
+      ReactGA.send({ hitType: "pageview", page: window.location.pathname });
+    }
   }, []);
+
+  const userHasConsentedToCookies = () => {
+    // Implementasi logika untuk mengecek apakah pengguna telah memberikan persetujuan
+    // Misalnya, cek apakah cookie consent telah disetujui dalam local storage atau cookie
+    return localStorage.getItem("cookieConsent") === "true";
+  };
 
   return (
     <Router>
