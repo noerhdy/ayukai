@@ -41,7 +41,7 @@ const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
                 onClick={handleClose}
                 className="px-4 py-2 dark:text-zinc-900 text-white dark:bg-[#fdb969] bg-black rounded-md transition duration-200"
               >
-                Got it!
+                Gotcha
               </button>
             </div>
           </div>

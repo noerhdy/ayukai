@@ -38,7 +38,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
                 />
               </div>
               <div className=" text-[12px] font-medium flex justify-center tracking-wider  text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
-                <h1>and i don't care what you think</h1>
+                <h1>and idc what you think</h1>
               </div>
             </div>
           </div>
