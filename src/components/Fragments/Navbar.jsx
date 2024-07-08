@@ -3,7 +3,7 @@ import AmPm from "../Fragments/AmPm";
 
 const Navbar = ({ onToggleAmPm, onShowrealClick }) => {
   return (
-    <div className="fixed w-full z-10 pt-4">
+    <div className="fixed w-full z-30 pt-2 rounded-md bg-clip backdrop-filter backdrop-blur-sm bg-opacity-0 bg-transparent">
       <nav className="text-zinc-500 max-w-screen-2xl flex justify-between items-center py-4 mx-4 text-lg">
         <h1 className="cursor-default text-2xl">Ayukai</h1>
         <div className="flex space-x-4">

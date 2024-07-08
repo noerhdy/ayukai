@@ -43,7 +43,7 @@ const AmPm = ({ onToggle }) => {
           className="hidden" // Ini agar checkbox tidak terlihat
         />
         <span
-          className={`slider mr-1 flex h-[15px] w-[29px] items-center rounded-full p-1 duration-200 ${
+          className={`mr-1 flex h-[15px] w-[29px] items-center rounded-full p-1 duration-200 ${
             isChecked
               ? "bg-neutral-400 group-hover:bg-white duration-200"
               : "bg-zinc-400 group-hover:bg-black duration-200"
