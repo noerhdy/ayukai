@@ -1,4 +1,3 @@
-import React from "react";
 import { RoutesConfig } from "../config";
 import React, { useEffect } from "react";
 
