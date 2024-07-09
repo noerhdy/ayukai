@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AmPm from "./AmPm";
+import AmPm from "./ToggleMode";
 
 const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
   const [hasSeenInstruction, setHasSeenInstruction] = useState(false);
@@ -28,10 +28,10 @@ const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
           exit={{ opacity: 0 }}
         >
           <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg shadow-lg">
-            <h2 className="text-lg dark:text-[#fdb969] font-bold pb-2 border-b border-zinc-400">
-              Instructions!
+            <h2 className="text-lg dark:text-[#fdb969] text-zinc-900 font-bold pb-2 border-b border-zinc-400">
+              Instructions
             </h2>
-            <div className="flex space-x-2 dark:text-zinc-200 mt-4">
+            <div className="flex space-x-2 dark:text-zinc-200 text-zinc-900 mt-4">
               <p>Use</p>
               <AmPm onToggle={onToggleAmPm} />
               <p>to switch modes.</p>
@@ -41,7 +41,7 @@ const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
                 onClick={handleClose}
                 className="px-4 py-2 dark:text-zinc-900 text-white dark:bg-[#fdb969] bg-black rounded-md transition duration-200"
               >
-                Gotcha
+                Got it
               </button>
             </div>
           </div>

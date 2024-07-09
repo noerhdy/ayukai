@@ -1,5 +1,5 @@
 import React from "react";
-import AmPm from "../Fragments/AmPm";
+import AmPm from "./ToggleMode";
 
 const Navbar = ({ onToggleAmPm, onShowrealClick }) => {
   return (

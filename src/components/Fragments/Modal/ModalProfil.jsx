@@ -2,15 +2,21 @@
 import React from "react";
 import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
-import { AcProfil2 } from "./AcProfil2.";
-import { AcProfil1 } from "./AcProfil1";
+import { AcProfil1 } from "../AcProfil1";
+import { AcProfil2 } from "../AcProfil2.";
 
 const ModalProfil = ({ isVisible, onClose }) => {
+  const data = [
+    {
+      name: "Gmail",
+      url: "https://mail.google.com/mail/u/0/?view=cm&tf=1&fs=1&to=hidayatnoer11@gmail.com",
+    },
+  ];
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow-y-auto sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-full text-wrap z-20 space-y-2 dark:text-zinc-400 bg-zinc-100 dark:bg-neutral-950 text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
+          className="overflow-y-auto sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-full text-wrap z-20 space-y-2 dark:text-zinc-300 bg-zinc-100 dark:bg-neutral-950 text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
@@ -31,15 +37,15 @@ const ModalProfil = ({ isVisible, onClose }) => {
               <div className="text-4xl  flex justify-center ">
                 <Typewriter
                   options={{
-                    strings: ["unknown", "blurryface"],
+                    strings: ["unknown", "not available", "undefined"],
                     autoStart: true,
                     loop: true,
                   }}
                 />
               </div>
-              <div className=" text-[12px] font-medium flex justify-center tracking-wider  text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
+              {/* <div className=" text-[12px] font-medium flex justify-center tracking-wider  text-md group-hover:text-zinc-200 delay-200 duration-500 ease-in-out drop-shadow text-red-500">
                 <h1>and idc what you think</h1>
-              </div>
+              </div> */}
             </div>
           </div>
 
@@ -52,11 +58,12 @@ const ModalProfil = ({ isVisible, onClose }) => {
                 close
               </button>
             </div>
-            <div className="text-sm w-full space-y-4 text-balance leading-8 ">
-              <h1>
+            <div className="text-sm  w-full space-y-4 text-balance leading-8 ">
+              <h1 className="font-semibold">
                 This is profil of Ayukai, where <i>we</i> post thoughts and
                 things that <i>we</i> think are worth keeping.
               </h1>
+              {/* Accordion  */}
               <AcProfil1 />
               <AcProfil2 />
             </div>
@@ -64,14 +71,14 @@ const ModalProfil = ({ isVisible, onClose }) => {
 
           <div className="flex max-w-screen-sm flex-col py-6  dark:border-none border-t border-dashed border-zinc-600 ">
             <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-[#fdb969] ">
-              Connect
+              Direct Message
             </h1>
             <div className="flex w-full justify-between">
               <div className="w-1/2 cursor-default text-zinc-800 dark:text-zinc-300">
-                Direct message where you open this site
+                Direct message
               </div>
               <div className="text-zinc-400 dark:text-zinc-600 cursor-not-allowed line-through">
-                Personal site
+                Personal sites
               </div>
             </div>
           </div>

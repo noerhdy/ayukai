@@ -1,7 +1,8 @@
 import React from "react";
-import ModalContent from "./ModalContent";
-import ModalProfil from "./ModalProfil";
+import ModalContent from "./Modal/ModalContent";
+import ModalProfil from "./Modal/ModalProfil";
 import InstructionModal from "./InstructionModal";
+import ModalOther from "./Modal/ModalOther";
 
 const ModalComponent = ({
   isContentVisible,
@@ -12,6 +13,8 @@ const ModalComponent = ({
   isInstructionVisible,
   handleCloseInstruction,
   handleToggleAmPm,
+  isOtherModalVisible,
+  handleCloseOtherModal,
 }) => {
   return (
     <>
@@ -28,6 +31,10 @@ const ModalComponent = ({
         isVisible={isInstructionVisible}
         onClose={handleCloseInstruction}
         onToggleAmPm={handleToggleAmPm}
+      />
+      <ModalOther
+        isVisible={isOtherModalVisible}
+        onClose={handleCloseOtherModal}
       />
     </>
   );

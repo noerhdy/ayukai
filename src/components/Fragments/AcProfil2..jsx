@@ -11,12 +11,12 @@ export const AcProfil2 = () => {
     <Accordion type="single" collapsible>
       <AccordionItem value="item-1">
         <AccordionTrigger>
-          <h1 className="font-medium  dark:text-[#fdb969] text-neutral-950 ">
+          <h1 className="font-semibold  dark:text-[#fdb969] text-neutral-950 ">
             Have some fucking integrity
           </h1>
         </AccordionTrigger>
         <AccordionContent>
-          <h1 className="text-balance leading-10">
+          <h1 className="text-balance font-normal leading-10">
             What you say matters. Your words are only as powerful as the action
             precode. When you dont follow through, you rob them of any value.
             Dont tell people what they want to hear. Dont live in the sad,

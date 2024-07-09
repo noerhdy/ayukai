@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import AudioContent from "./AudioContent";
+import AudioContent from "../Audio/AudioContent";
 
 const ModalContent = ({ isVisible, onClose, data }) => {
   const [isPlaying, setIsPlaying] = useState(false);
