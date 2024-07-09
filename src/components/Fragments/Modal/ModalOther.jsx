@@ -1,30 +1,63 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ModalOther = ({ isVisible, onClose }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const videoRef = useRef(null);
 
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (video) {
+      const handlePlaying = () => setIsPlaying(true);
+      const handlePause = () => setIsPlaying(false);
+      const handleEnded = () => setIsPlaying(false);
+
+      video.addEventListener("playing", handlePlaying);
+      video.addEventListener("pause", handlePause);
+      video.addEventListener("ended", handleEnded);
+
+      return () => {
+        video.removeEventListener("playing", handlePlaying);
+        video.removeEventListener("pause", handlePause);
+        video.removeEventListener("ended", handleEnded);
+      };
+    }
+  }, []);
+
+  useEffect(() => {
+    const video = videoRef.current;
+
+    if (video) {
+      if (isVisible) {
+        setIsPlaying(true);
+        video.currentTime = 0;
+        video.play();
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
+    }
+  }, [isVisible]);
+
   const handleVideoClick = () => {
     const video = videoRef.current;
-    if (video.paused) {
-      video.play();
-      setIsPlaying(true);
-    } else {
-      video.pause();
-      setIsPlaying(false);
+    if (video) {
+      if (video.paused) {
+        video.play();
+        setIsPlaying(true);
+      } else {
+        video.pause();
+        setIsPlaying(false);
+      }
     }
-  };
-
-  const handleVideoEnded = () => {
-    setIsPlaying(false); // Setelah video selesai, atur isPlaying menjadi false
   };
 
   return (
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow sm:w-3/5 sm:h-5/6 h-screen w-full bg-[#050505] z-40 space-y-2  absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
+          className="overflow sm:w-3/5 sm:h-5/6 h-screen w-full bg-[#050505] z-40 space-y-2 absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
@@ -32,28 +65,26 @@ const ModalOther = ({ isVisible, onClose }) => {
         >
           <div className="flex max-w-screen-md relative h-full justify-center">
             <div className="flex flex-col justify-center space-y-2 items-start w-fit">
-              <div
-                className="w-full  cursor-pointer"
-                onClick={handleVideoClick}
-              >
+              <div className="w-full cursor-pointer" onClick={handleVideoClick}>
                 <video
+                  controls={false}
                   ref={videoRef}
                   width="750"
                   height="500"
-                  onEnded={handleVideoEnded} // Tambahkan handler untuk event onEnded
+                  onEnded={() => setIsPlaying(false)}
                 >
                   <source src="./mp4/am.mp4" type="video/mp4" />
                 </video>
-                {!isPlaying && (
+                {/* {!isPlaying && (
                   <div className="absolute inset-0 flex items-center justify-center z-40">
                     <div className="aspect-video w-full bg-transparent ease-in-out duration-500">
                       <div className="aspect-video h-1/2 w-full border-b-white border-b-2"></div>
                     </div>
                   </div>
-                )}
+                )} */}
               </div>
             </div>
-            {!isPlaying && ( // Tampilkan tombol Close hanya jika isPlaying false (video berhenti)
+            {!isPlaying && (
               <div className="absolute z-50 bottom-0 pb-20 sm:font-medium">
                 <button
                   className="cursor-pointer font-medium text-md dark:hover:text-[#fdb969] dark:text-zinc-500 ease-in-out duration-500 delay-100"
