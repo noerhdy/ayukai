@@ -32,7 +32,10 @@ const ModalOther = ({ isVisible, onClose }) => {
         >
           <div className="flex max-w-screen-md relative h-full justify-center">
             <div className="flex flex-col justify-center space-y-2 items-start w-fit">
-              <div className="w-full cursor-pointer" onClick={handleVideoClick}>
+              <div
+                className="w-full  cursor-pointer"
+                onClick={handleVideoClick}
+              >
                 <video
                   ref={videoRef}
                   width="750"
@@ -51,7 +54,7 @@ const ModalOther = ({ isVisible, onClose }) => {
               </div>
             </div>
             {!isPlaying && ( // Tampilkan tombol Close hanya jika isPlaying false (video berhenti)
-              <div className="absolute bottom-0 pb-20 sm:font-medium">
+              <div className="absolute z-50 bottom-0 pb-20 sm:font-medium">
                 <button
                   className="cursor-pointer font-medium text-md dark:hover:text-[#fdb969] dark:text-zinc-500 ease-in-out duration-500 delay-100"
                   onClick={onClose}
