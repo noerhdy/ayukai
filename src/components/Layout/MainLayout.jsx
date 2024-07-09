@@ -54,7 +54,7 @@ const MainLayout = () => {
 
   return (
     <div className={theme === "dark" ? "dark" : ""}>
-      <div className="w-screen h-screen justify-center  flex overflow-hidden dark:text-black bg-zinc-100 dark:bg-zinc-950 text-zinc-300">
+      <div className=" justify-center  flex overflow-hidden dark:text-black bg-zinc-100 dark:bg-zinc-950 text-zinc-300">
         <div className=" flex-col max-w-screen-2xl w-full h-screen ">
           <Navbar
             onToggleAmPm={handleToggleAmPm}

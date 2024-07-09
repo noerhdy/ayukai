@@ -24,7 +24,7 @@ const ModalOther = ({ isVisible, onClose }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow sm:w-3/5 sm:h-5/6 h-full w-full :top-0 z-40 space-y-2 bg-[#050505] absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
+          className="overflow sm:w-3/5 sm:h-5/6 h-full w-full  z-40 space-y-2 bg-[#050505] absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
