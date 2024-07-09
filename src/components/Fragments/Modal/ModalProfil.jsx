@@ -16,7 +16,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow-y-auto sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-full text-wrap z-20 space-y-2 dark:text-zinc-300 bg-zinc-100 dark:bg-neutral-950 text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
+          className="overflow-y-scroll sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-full text-wrap z-20 space-y-2 dark:text-zinc-300 bg-zinc-100 dark:bg-neutral-950 text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
