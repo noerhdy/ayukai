@@ -24,13 +24,13 @@ const ModalOther = ({ isVisible, onClose }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow sm:w-3/5 sm:h-5/6 h-full w-full  z-40 space-y-2 bg-[#050505] absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
+          className="overflow sm:w-3/5 sm:h-5/6 h-full w-full bg-[#050505] z-40 space-y-2  absolute sm:bottom-0 sm:right-0 sm:p-8 p-0"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
           transition={{ duration: 1, ease: "easeInOut" }}
         >
-          <div className="flex max-w-screen-md  relative h-full justify-center">
+          <div className="flex max-w-screen-md relative h-full justify-center">
             <div className="flex flex-col justify-center space-y-2 items-start w-fit">
               <div className="w-full cursor-pointer" onClick={handleVideoClick}>
                 <video
@@ -41,6 +41,13 @@ const ModalOther = ({ isVisible, onClose }) => {
                 >
                   <source src="./mp4/am.mp4" type="video/mp4" />
                 </video>
+                {!isPlaying && (
+                  <div className="absolute inset-0 flex items-center justify-center z-40">
+                    <div className="aspect-video w-full bg-transparent ease-in-out duration-500">
+                      <div className="aspect-video h-1/2 w-full border-b-white border-b-2"></div>
+                    </div>
+                  </div>
+                )}
               </div>
             </div>
             {!isPlaying && ( // Tampilkan tombol Close hanya jika isPlaying false (video berhenti)
