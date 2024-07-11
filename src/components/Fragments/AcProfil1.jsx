@@ -31,9 +31,7 @@ export const AcProfil1 = () => {
             >
               Mayukai
             </span>
-            . <i>We </i>
-            chose Ayukai because <i>we</i> like the way it sounds. This theme
-            uses the base color swatch from the{" "}
+            . This theme uses the base color swatch from the{" "}
             <span
               className="underline cursor-pointer hover:no-underline hover:dark:text-[#fdb969] hover:text-red-500 ease-in-out duration-500 delay-100"
               onClick={() =>
@@ -42,8 +40,9 @@ export const AcProfil1 = () => {
             >
               Ayu Theme
             </span>
-            , with some adjustments for syntax coloring. Last but not least, we
-            simply like it overall.
+            , with some adjustments for syntax coloring. <i>We </i>
+            chose Ayukai because <i>we</i> like the way it sounds. Last but not
+            least, we simply like it overall.
           </h1>
         </AccordionContent>
       </AccordionItem>
