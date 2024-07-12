@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
 import { AcProfil1 } from "../AcProfil1";
 import { AcProfil2 } from "../AcProfil2.";
+import LastUpdatedComponent from "../../LastUpdateComponent";
 
 const ModalProfil = ({ isVisible, onClose }) => {
   const data = [
@@ -53,6 +54,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
               </div> */}
             </div>
           </div>
+          <LastUpdatedComponent />
 
           <div className="flex flex-col space-y-4 pb-24 max-w-screen-sm py-4">
             <div className="text-end">
