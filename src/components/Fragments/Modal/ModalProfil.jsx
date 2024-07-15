@@ -4,6 +4,7 @@ import Typewriter from "typewriter-effect";
 import { motion, AnimatePresence } from "framer-motion";
 import { AcProfil1 } from "../AcProfil1";
 import { AcProfil2 } from "../AcProfil2.";
+import LastUpdatedComponent from "@/components/LastUpdatedComponent";
 
 const ModalProfil = ({ isVisible, onClose }) => {
   const data = [
@@ -21,7 +22,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
     <AnimatePresence>
       {isVisible && (
         <motion.div
-          className="overflow-y-scroll sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-screen text-wrap z-20 space-y-2 dark:text-zinc-300 bg-zinc-100 dark:bg-[#050505] text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
+          className="overflow-y-scroll  sm:w-3/5 sm:h-5/6 pt-24 sm:pt-12 h-screen text-wrap z-20 space-y-2 dark:text-zinc-300 bg-zinc-100 dark:bg-[#050505] text-zinc-950 absolute sm:bottom-0 sm:right-0 p-8"
           initial={{ y: 800, rotate: 45 }}
           animate={{ y: 0, rotate: 0 }}
           exit={{ y: 800, rotate: 45 }}
@@ -55,7 +56,8 @@ const ModalProfil = ({ isVisible, onClose }) => {
           </div>
 
           <div className="flex flex-col space-y-4 pb-24 max-w-screen-sm py-4">
-            <div className="text-end">
+            <div className="flex justify-between pb-4">
+              <LastUpdatedComponent />
               <button
                 className="cursor-pointer font-medium text-sm dark:hover:text-[#fdb969] text-zinc-500 hover:text-black ease-in-out duration-500 delay-100"
                 onClick={onClose}
