@@ -5,7 +5,8 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AcProfil1 } from "../AcProfil1";
 import { AcProfil2 } from "../AcProfil2.";
 import LastUpdatedComponent from "@/components/LastUpdatedComponent";
-import ButtonCta from "../ButtonCta";
+import ButtonCta from "../CTA/ButtonClose";
+import ButtonLink from "../CTA/ButtonLink";
 
 const ModalProfil = ({ isVisible, onClose }) => {
   const data = [
@@ -73,18 +74,19 @@ const ModalProfil = ({ isVisible, onClose }) => {
           </div>
 
           <div className="flex max-w-screen-sm flex-col py-6 dark:border-none border-t border-dashed border-zinc-600">
-            <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-red-500">
+            <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-zinc-400">
               Direct Message
             </h1>
             <div className="flex w-full justify-between">
               {data.map((item) => (
-                <div
+                <ButtonLink
                   key={item.name}
-                  className="w-1/2 cursor-pointer text-zinc-800 dark:text-zinc-300 underline hover:no-underline "
-                  onClick={() => handleClick(item.url)}
-                >
-                  {item.name}
-                </div>
+                  name={item.name}
+                  url={item.url}
+                  className="text-zinc-400 dark:text-zinc-400"
+                  hoverClassName="group-hover:text-red-500 group-hover:dark:text-red-500"
+                  onClick={handleClick}
+                />
               ))}
               <div className="text-zinc-400 dark:text-zinc-600 cursor-not-allowed line-through">
                 Personal sites

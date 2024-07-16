@@ -1,6 +1,6 @@
 import React from "react";
 import { ArrowUpRight } from "lucide-react";
-const ButtonCta = ({ onClick }) => {
+const ButtonClose = ({ onClick }) => {
   return (
     <button
       className="cursor-pointer group flex items-center"
@@ -11,10 +11,10 @@ const ButtonCta = ({ onClick }) => {
       </h3>
       <ArrowUpRight
         size={22}
-        className="group-hover:rotate-0 rotate-90  group-hover:text-red-500 text-zinc-500 ease-in-out duration-500 delay-100"
+        className="group-hover:rotate-0 rotate-90 group-hover:text-red-500 text-zinc-500 ease-in-out duration-500 delay-100"
       />
     </button>
   );
 };
 
-export default ButtonCta;
+export default ButtonClose;

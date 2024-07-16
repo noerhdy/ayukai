@@ -1,13 +1,18 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AudioContent from "../Audio/AudioContent";
-import ButtonCta from "../ButtonCta";
+import ButtonCta from "../CTA/ButtonClose";
+import ButtonLink from "../CTA/ButtonLink";
 
 const ModalContent = ({ isVisible, onClose, data }) => {
   const [isPlaying, setIsPlaying] = useState(false);
 
   const handlePlayPause = (playing) => {
     setIsPlaying(playing);
+  };
+
+  const handleLinkClick = (url) => {
+    window.open(url, "_blank", "noopener,noreferrer");
   };
 
   return (
@@ -47,9 +52,13 @@ const ModalContent = ({ isVisible, onClose, data }) => {
                 </div>
               </div>
               <div className="flex w-full justify-between items-center pt-8 font-medium">
-                <div className="font-medium normal-nums cursor-default dark:text-zinc-500">
-                  {data.date}
-                </div>
+                <ButtonLink
+                  name="view"
+                  url={data.site}
+                  onClick={handleLinkClick}
+                  className="text-zinc-500 dark:text-zinc-500"
+                  hoverClassName="group-hover:text-white group-hover:dark:text-black"
+                />
                 <ButtonCta onClick={onClose} />
               </div>
             </div>

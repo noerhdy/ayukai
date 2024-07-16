@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import ButtonCta from "../ButtonCta";
+import ButtonCta from "../CTA/ButtonClose";
 
 const ModalOther = ({ isVisible, onClose }) => {
   const [isPlaying, setIsPlaying] = useState(false);

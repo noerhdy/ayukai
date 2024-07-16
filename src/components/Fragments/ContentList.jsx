@@ -39,7 +39,7 @@ const ContentListComponent = ({ data, handleItemClick, isPm }) => {
         {/* list component for modal other */}
         {isPm && (
           <div
-            className="flex place-content-start w-full  cursor-pointer text-sm font-bold text-zinc-700 dark:hover:text-[#fdb969]  ease-in-out duration-200"
+            className="flex place-content-start w-full  cursor-pointer text-sm font-bold text-zinc-700 dark:hover:text-red-500 ease-in-out duration-200"
             onClick={handleOtherItemClick}
           >
             <div className="w-16 sm:w-14 md:w-16 lg:w-24">

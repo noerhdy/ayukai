@@ -1,4 +1,5 @@
 import React, { useState, useRef, useEffect } from "react";
+import { Play, Pause } from "lucide-react";
 
 const AudioContent = ({ musicUrl, onPlayPause }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -66,11 +67,12 @@ const AudioContent = ({ musicUrl, onPlayPause }) => {
       <audio ref={audioRef} src={musicUrl}></audio>
       <button
         className={`font-bold text-xl ${
-          isPlaying ? "text-[#fdb969]" : "text-red-500"
+          isPlaying ? "text-zinc-50" : "text-red-500"
         }`}
         onClick={togglePlay}
       >
-        {isPlaying ? "Pause" : "Play"}
+        {/* {isPlaying ? "pause" : "play"} */}
+        {isPlaying ? <Pause size={24} /> : <Play size={24} />}
       </button>
     </div>
   );
