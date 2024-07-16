@@ -27,8 +27,8 @@ const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
         >
-          <div className="bg-white dark:bg-zinc-900 p-6 rounded-lg shadow-lg">
-            <h2 className="text-lg dark:text-[#fdb969] text-zinc-900 font-bold pb-2 border-b border-zinc-400">
+          <div className="bg-white dark:bg-zinc-950 p-6 rounded-lg shadow-lg">
+            <h2 className="text-lg dark:text-zinc-100 text-zinc-900 font-bold pb-2 border-b border-zinc-400">
               Instructions
             </h2>
             <div className="flex space-x-2 dark:text-zinc-200 text-zinc-900 mt-4">
@@ -39,7 +39,7 @@ const InstructionModal = ({ isVisible, onClose, onToggleAmPm }) => {
             <div className="flex justify-end mt-8">
               <button
                 onClick={handleClose}
-                className="px-4 py-2 dark:text-zinc-900 text-white dark:bg-[#fdb969] bg-black rounded-md transition duration-200"
+                className="px-4 py-2 dark:text-zinc-900 text-white dark:bg-zinc-200 bg-black rounded-md transition duration-200"
               >
                 Got it
               </button>

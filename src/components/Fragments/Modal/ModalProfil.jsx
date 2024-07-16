@@ -5,6 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { AcProfil1 } from "../AcProfil1";
 import { AcProfil2 } from "../AcProfil2.";
 import LastUpdatedComponent from "@/components/LastUpdatedComponent";
+import ButtonCta from "../ButtonCta";
 
 const ModalProfil = ({ isVisible, onClose }) => {
   const data = [
@@ -58,12 +59,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
           <div className="flex flex-col space-y-4 pb-24 max-w-screen-sm py-4">
             <div className="flex justify-between pb-4">
               <LastUpdatedComponent />
-              <button
-                className="cursor-pointer font-medium text-sm dark:hover:text-[#fdb969] text-zinc-500 hover:text-black ease-in-out duration-500 delay-100"
-                onClick={onClose}
-              >
-                close
-              </button>
+              <ButtonCta onClick={onClose} />
             </div>
             <div className="text-sm w-full space-y-4 text-balance leading-8">
               <h1 className="font-semibold">
@@ -77,7 +73,7 @@ const ModalProfil = ({ isVisible, onClose }) => {
           </div>
 
           <div className="flex max-w-screen-sm flex-col py-6 dark:border-none border-t border-dashed border-zinc-600">
-            <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-[#fdb969]">
+            <h1 className="font-medium pb-4 cursor-default text-zinc-800 dark:text-red-500">
               Direct Message
             </h1>
             <div className="flex w-full justify-between">

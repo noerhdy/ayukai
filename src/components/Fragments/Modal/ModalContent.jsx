@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import AudioContent from "../Audio/AudioContent";
+import ButtonCta from "../ButtonCta";
 
 const ModalContent = ({ isVisible, onClose, data }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -49,12 +50,7 @@ const ModalContent = ({ isVisible, onClose, data }) => {
                 <div className="font-medium normal-nums cursor-default dark:text-zinc-500">
                   {data.date}
                 </div>
-                <button
-                  className="cursor-pointer font-medium text-md hover:text-[#fdb969] dark:text-zinc-500 dark:hover:text-black ease-in-out duration-500 delay-100"
-                  onClick={onClose}
-                >
-                  close
-                </button>
+                <ButtonCta onClick={onClose} />
               </div>
             </div>
           </div>

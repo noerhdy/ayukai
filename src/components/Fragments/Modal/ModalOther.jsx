@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import ButtonCta from "../ButtonCta";
 
 const ModalOther = ({ isVisible, onClose }) => {
   const [isPlaying, setIsPlaying] = useState(false);
@@ -86,12 +87,7 @@ const ModalOther = ({ isVisible, onClose }) => {
             </div>
             {!isPlaying && (
               <div className="absolute z-50 bottom-0 pb-20 sm:font-medium">
-                <button
-                  className="cursor-pointer font-medium text-md dark:hover:text-[#fdb969] dark:text-zinc-500 ease-in-out duration-500 delay-100"
-                  onClick={onClose}
-                >
-                  Close
-                </button>
+                <ButtonCta onClick={onClose} />
               </div>
             )}
           </div>
